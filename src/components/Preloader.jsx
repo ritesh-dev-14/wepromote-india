@@ -30,8 +30,13 @@ export default function Preloader() {
     };
   }, [prefersReducedMotion]);
 
+  // After the exit animation fully completes, fire the event
+  const handleExitComplete = () => {
+    window.dispatchEvent(new CustomEvent("wepromote:preloader-done"));
+  };
+
   return (
-    <AnimatePresence>
+    <AnimatePresence onExitComplete={handleExitComplete}>
       {visible && (
         <motion.div
           key="site-preloader"

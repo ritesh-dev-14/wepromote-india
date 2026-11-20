@@ -104,7 +104,7 @@ export default function About() {
                 className="grid gap-5 border-t border-white/15 py-9 md:grid-cols-[80px_0.8fr_1fr]"
               >
 
-                <span className="text-xs text-[#B39A72]">
+                <span className="text-xs text-[#ff3b12]">
                   {item.number}
                 </span>
 

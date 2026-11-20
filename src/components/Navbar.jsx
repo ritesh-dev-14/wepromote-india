@@ -41,7 +41,7 @@
 
 //         <Link
 //           to="/book-a-call"
-//           className="hidden items-center gap-3 border border-[#B39A72] px-5 py-3 text-[10px] uppercase tracking-[1.5px] text-[#B39A72] transition hover:bg-[#B39A72] hover:text-black lg:flex"
+//           className="hidden items-center gap-3 border border-[#ff3b12] px-5 py-3 text-[10px] uppercase tracking-[1.5px] text-[#ff3b12] transition hover:bg-[#ff3b12] hover:text-black lg:flex"
 //         >
 //           Start a Conversation
 //           <ArrowUpRight size={14} />

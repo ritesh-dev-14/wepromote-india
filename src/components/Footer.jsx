@@ -34,7 +34,7 @@ export default function Footer() {
                 <Link
                   key={path}
                   to={path}
-                  className="mb-5 block text-sm text-white/60 transition hover:text-[#B39A72]"
+                  className="mb-5 block text-sm text-white/60 transition hover:text-[#ff3b12]"
                 >
                   {name}
                 </Link>
@@ -46,14 +46,14 @@ export default function Footer() {
 
               <a
                 href="mailto:info@wepromoteindia.com"
-                className="mb-5 block text-sm text-white/60 hover:text-[#B39A72]"
+                className="mb-5 block text-sm text-white/60 hover:text-[#ff3b12]"
               >
                 info@wepromoteindia.com
               </a>
 
               <a
                 href="tel:+917009404727"
-                className="mb-5 block text-sm text-white/60 hover:text-[#B39A72]"
+                className="mb-5 block text-sm text-white/60 hover:text-[#ff3b12]"
               >
                 +91 7009404727
               </a>
@@ -67,7 +67,7 @@ export default function Footer() {
               </p>
 
               <div className="mt-7 flex gap-4">
-                <a href="#" aria-label="Instagram" className="hover:text-[#B39A72]">
+                <a href="#" aria-label="Instagram" className="hover:text-[#ff3b12]">
                   <svg
                     width="19"
                     height="19"
@@ -82,7 +82,7 @@ export default function Footer() {
                     <circle cx="18" cy="6" r="1" fill="currentColor" stroke="none" />
                   </svg>
                 </a>
-                <a href="#" aria-label="LinkedIn" className="hover:text-[#B39A72]">
+                <a href="#" aria-label="LinkedIn" className="hover:text-[#ff3b12]">
                   <svg
                     width="19"
                     height="19"

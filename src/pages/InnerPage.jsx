@@ -8,7 +8,7 @@ export default function InnerPage({ title, subtitle }) {
       <div className="container section-padding">
         <Link
           to="/"
-          className="mb-14 inline-flex items-center gap-3 text-xs uppercase tracking-widest text-white/50 hover:text-[#B39A72]"
+          className="mb-14 inline-flex items-center gap-3 text-xs uppercase tracking-widest text-white/50 hover:text-[#ff3b12]"
         >
           <ArrowLeft size={15} />
           Back to Home

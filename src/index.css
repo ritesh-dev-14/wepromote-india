@@ -11,7 +11,7 @@
 
   --black: #090909;
   --ivory: #f1efe9;
-  --gold: #b39a72;
+  --gold: #ff3b12;
   --steel: #8d8d8d;
   --muted: #a4a19a;
 }
@@ -315,21 +315,251 @@ img {
   background: var(--gold);
 }
 
+.thread-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--black);
+}
+
+.thread-hero {
+  position: relative;
+  display: flex;
+  min-height: 100svh;
+  align-items: center;
+  padding: 120px 36px 72px;
+  background: #090909;
+}
+
+.thread-hero-content {
+  position: relative;
+  z-index: 4;
+  width: min(100%, 1540px);
+  margin-inline: auto;
+}
+
+.thread-eyebrow,
+.thread-intro-label {
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.thread-title {
+  margin-top: 30px;
+  color: var(--ivory);
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(72px, 12.4vw, 188px);
+  font-weight: 800;
+  letter-spacing: -0.085em;
+  line-height: 0.84;
+  text-transform: uppercase;
+}
+
+.thread-title span,
+.thread-title .hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.thread-hero-footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 42px;
+}
+
+.thread-hero-footer > p {
+  max-width: 430px;
+  color: rgba(241, 239, 233, 0.82);
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.thread-scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ivory);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.thread-scroll svg {
+  color: #ff492e;
+  transition: transform 0.25s ease;
+}
+
+.thread-scroll:hover svg {
+  transform: translateY(4px);
+}
+
+.thread-hero-index {
+  position: absolute;
+  right: 36px;
+  bottom: 28px;
+  z-index: 2;
+  color: rgba(241, 239, 233, 0.55);
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.thread-intro {
+  position: relative;
+  min-height: 850px;
+  padding-block: 100px 110px;
+  background: #f1efe9;
+  color: #151515;
+  scroll-margin-top: 80px;
+}
+
+.thread-intro > .container {
+  position: relative;
+  z-index: 4;
+}
+
+.thread-intro-label {
+  margin-bottom: 36px;
+  color: #ff3b12;
+}
+
+.thread-intro-title {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(38px, 5.2vw, 74px);
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 0.98;
+}
+
+.thread-intro-title span {
+  color: #ff3b12;
+}
+
+.thread-intro .story-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.thread-principles {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 100px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(21, 21, 21, 0.18);
+}
+
+.thread-principle > span {
+  color: #ff3b12;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.thread-principle h3 {
+  margin-top: 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+
+.thread-principle p {
+  max-width: 270px;
+  margin-top: 12px;
+  color: #68635c;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+:root {
+  --signal-red: #ff3b12;
+  --signal-glow: rgba(255, 59, 18, 0.75);
+  --thread-width: 1.85px;
+}
+
+.hero-thread-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.hero-thread-back {
+  z-index: 3;
+}
+
+.hero-thread-front {
+  z-index: 5;
+}
+
+.hero-thread-path {
+  fill: none;
+  stroke: var(--signal-red);
+  stroke-width: var(--thread-width);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.hero-thread-origin,
+.hero-thread-head,
+.hero-thread-end-dot {
+  fill: var(--signal-red);
+  stroke: none;
+  vector-effect: non-scaling-stroke;
+}
+
+.hero-thread-origin,
+.hero-thread-head {
+  filter: drop-shadow(0 0 6px var(--signal-glow));
+}
+
+.hero-thread-end-ring {
+  fill: none;
+  stroke: var(--signal-red);
+  stroke-width: 1.4px;
+  vector-effect: non-scaling-stroke;
+  animation: heroThreadPulse 2.4s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes heroThreadPulse {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 1;
+  }
+}
+
 .story-section {
   background: var(--ivory);
   color: #151515;
 }
 
 .story-section .eyebrow {
-  color: #8b7049;
+  color: #ff3b12;
 }
 
 .story-section .eyebrow::before {
-  background: #8b7049;
+  background: #ff3b12;
 }
 
 .story-section .serif {
-  color: #987d56;
+  color: #ff3b12;
 }
 
 .story-copy {
@@ -626,6 +856,24 @@ img {
     gap: 35px;
   }
 
+  .thread-hero {
+    padding-inline: 24px;
+  }
+
+  .thread-title {
+    font-size: clamp(60px, 12.2vw, 110px);
+  }
+
+  .thread-intro {
+    min-height: 780px;
+    padding-block: 84px;
+  }
+
+  .thread-principles {
+    gap: 24px;
+    margin-top: 72px;
+  }
+
   .timeline-section {
     padding-block: 90px;
   }
@@ -655,6 +903,61 @@ img {
 
   .philosophy-section {
     padding-block: 64px;
+  }
+
+  .thread-hero {
+    min-height: 92svh;
+    padding: 125px 18px 76px;
+  }
+
+  .thread-title {
+    margin-top: 24px;
+    font-size: clamp(38px, 10.2vw, 62px);
+    line-height: 0.92;
+    letter-spacing: -0.09em;
+  }
+
+  .thread-hero-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 30px;
+  }
+
+  .thread-hero-footer > p {
+    max-width: 300px;
+    font-size: 13px;
+  }
+
+  .thread-scroll {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .thread-hero-index {
+    right: 18px;
+    bottom: 22px;
+    left: 18px;
+    font-size: 8px;
+  }
+
+  .thread-intro {
+    min-height: 0;
+    padding-block: 68px 82px;
+  }
+
+  .thread-intro-label {
+    margin-bottom: 28px;
+  }
+
+  .thread-intro-title {
+    font-size: clamp(35px, 10vw, 56px);
+  }
+
+  .thread-principles {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 56px;
   }
 
   .timeline-section {
