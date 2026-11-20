@@ -705,7 +705,7 @@ export default function Home() {
 
             <Link
               to="/work"
-              className="button-outline !border-black/30 !text-black"
+              className="button-outline work-projects-button"
             >
               View All Projects
               <ArrowUpRight size={15} />
@@ -791,7 +791,7 @@ export default function Home() {
       {/* =================================================================
           8. FINAL CTA
       ================================================================== */}
-      <section className="relative z-20 overflow-hidden bg-[#ff3b12] py-28 text-[#111111]">
+      <section className="home-final-cta relative z-20 overflow-hidden bg-[#ff3b12] text-[#111111]">
         <div className="container relative z-10">
           <motion.div
             initial="hidden"

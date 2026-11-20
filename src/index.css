@@ -162,6 +162,18 @@ img {
   color: var(--gold);
 }
 
+.work-projects-button {
+  border-color: rgba(17, 17, 17, 0.3);
+  color: #111;
+}
+
+.work-projects-button:hover,
+.work-projects-button:focus-visible {
+  border-color: #ff3b12;
+  background: #ff3b12;
+  color: #111;
+}
+
 .line {
   width: 100%;
   height: 1px;
@@ -840,6 +852,10 @@ img {
 
 .footer {
   background: #111;
+}
+
+.home-final-cta {
+  padding-block: clamp(120px, 11vw, 160px);
 }
 
 @media (max-width: 900px) {
